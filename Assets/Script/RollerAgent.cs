@@ -37,7 +37,7 @@ public class RollerAgent : Agent
 
     // 状態取得時に呼ばれる
     public override void CollectObservations(VectorSensor sensor)
-    {
+    {//学習するデータ：ここで取得した数値を蓄積して学習する
         sensor.AddObservation(target.localPosition.x); //TargetのX座標
         sensor.AddObservation(target.localPosition.z); //TargetのZ座標
         sensor.AddObservation(this.transform.localPosition.x); //RollerAgentのX座標
